@@ -1,0 +1,13 @@
+@import "../../../../scss/colors";
+
+.button {
+  border: 1px solid $danger;
+  background-color: $accentColor2;
+  color: $danger;
+  padding: 12px;
+  border-radius: 5px;
+  &:hover {
+    background-color: $accentColor3;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,17 @@
+@import "../../../../scss/colors";
+
+.container {
+  height: 80px;
+  width: 90px;
+  border-radius: 12px;
+
+  background-color: $accentColor4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+  }
+}

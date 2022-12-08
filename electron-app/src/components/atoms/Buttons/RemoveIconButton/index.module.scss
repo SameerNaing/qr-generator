@@ -1,0 +1,9 @@
+@import "../../../../scss/colors";
+
+.button {
+  background-color: $accentColor2;
+  border: none;
+  &:hover {
+    cursor: pointer;
+  }
+}

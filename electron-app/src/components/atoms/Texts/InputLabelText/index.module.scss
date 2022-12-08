@@ -1,0 +1,9 @@
+@import "../../../../scss/fonts";
+@import "../../../../scss/colors";
+
+.label {
+  font-family: $poppins;
+  font-weight: 500;
+  font-size: 13px;
+  color: $secondary;
+}

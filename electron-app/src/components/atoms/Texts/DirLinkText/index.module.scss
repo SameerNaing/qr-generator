@@ -1,0 +1,13 @@
+@import "../../../../scss/colors";
+@import "../../../../scss/fonts";
+
+.link {
+  color: $primary;
+  font-family: $poppins;
+  text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}

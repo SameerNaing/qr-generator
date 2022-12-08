@@ -1,0 +1,12 @@
+@import "../../../../scss/colors";
+@import "../../../../scss/fonts";
+
+.select {
+  background-color: $accentColor2;
+  border: 1px solid $primary;
+  font-family: $poppins;
+  width: 250px;
+  padding: 5px 20px;
+  border-radius: 5px;
+  outline: none;
+}

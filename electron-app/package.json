@@ -1,0 +1,131 @@
+{
+  "main": "src/electronProcess/index.js",
+  "homepage": "./",
+  "productName": "QR Generator",
+  "name": "qr-generator",
+  "author": "Naing Ye Oo",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/material": "^5.10.14",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/electron": "^1.6.10",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.3",
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.9",
+    "cross-env": "^7.0.3",
+    "electron-is-dev": "^2.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.6.0",
+    "react-loader-spinner": "^5.3.4",
+    "react-router-dom": "^6.4.3",
+    "react-scripts": "5.0.1",
+    "typescript": "^4.9.3",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "clean": "tsc --build --clean",
+    "tsc": "tsc ./src/electronProcess/*.ts",
+    "compile": "npm run clean && npm run tsc",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "dev-mac": "npm run compile && concurrently -k \"BROWSER=none npm start\" \"npm run electron\"",
+    "dev-win": "concurrently -k \"cross-env BROWSER=none npm start\" \"npm run electron\"",
+    "electron": "wait-on tcp:3000 && electron .",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public",
+    "electron-pack": "electron-builder"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^6.5.13",
+    "@storybook/addon-essentials": "^6.5.13",
+    "@storybook/addon-interactions": "^6.5.13",
+    "@storybook/addon-links": "^6.5.13",
+    "@storybook/builder-webpack5": "^6.5.13",
+    "@storybook/manager-webpack5": "^6.5.13",
+    "@storybook/node-logger": "^6.5.13",
+    "@storybook/preset-create-react-app": "^4.1.2",
+    "@storybook/react": "^6.5.13",
+    "@storybook/testing-library": "^0.0.13",
+    "@types/tapable": "^0.2.5",
+    "babel-plugin-named-exports-order": "^0.0.2",
+    "concurrently": "^7.5.0",
+    "electron": "^21.3.0",
+    "electron-builder": "^23.6.0",
+    "prop-types": "^15.8.1",
+    "sass": "^1.56.1",
+    "wait-on": "^6.0.1",
+    "webpack": "^5.75.0"
+  },
+  "build": {
+    "appId": "com.electron.example-app",
+    "mac": {
+      "icon": "./app-logo.icns",
+      "category": "public.app-category.productivity",
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
+    "win": {
+      "icon": "./app-logo.ico",
+      "target": [
+        {
+          "target": "msi",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ]
+    },
+    "files": [
+      "**/*",
+      "./build/**/*",
+      "./public/**/*"
+    ],
+    "extraMetadata": {
+      "main": "./src/electronProcess/index.js"
+    },
+    "directories": {
+      "buildResources": "./build/**/*"
+    },
+    "extends": null
+  }
+}

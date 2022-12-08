@@ -1,0 +1,13 @@
+@import "../../../../scss/colors";
+
+.button {
+  background-color: $accentColor4;
+  height: 90px;
+  width: 100px;
+  border: none;
+  border-radius: 12px;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+}
