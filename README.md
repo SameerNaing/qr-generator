@@ -5,9 +5,9 @@
 
 ## About
 
-https://user-images.githubusercontent.com/42463994/206514586-bdbcbcc5-fad3-419c-a1a8-7b66617b7077.mov
-
 QR generator app allows you to create bulk of QRs from Csv file.
+
+https://user-images.githubusercontent.com/42463994/206514586-bdbcbcc5-fad3-419c-a1a8-7b66617b7077.mov
 
 ## Tech Stack
 
